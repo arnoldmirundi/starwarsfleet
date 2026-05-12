@@ -1,0 +1,117 @@
+:host {
+  display: block;
+  height: 100vh;
+}
+
+.ag-theme-quartz {
+  --ag-font-size: 12px;
+
+  --ag-font-family:
+    Inter,
+    -apple-system,
+    BlinkMacSystemFont,
+    "SF Pro Display",
+    "Helvetica Neue",
+    sans-serif;
+
+  --ag-header-height: 32px;
+
+  --ag-row-height: 32px;
+
+  --ag-cell-horizontal-padding: 6px;
+
+  --ag-background-color: #ffffff;
+
+  --ag-foreground-color: #1f2937;
+
+  --ag-border-color: #e0e1e6;
+
+  --ag-header-background-color: #ffffff;
+
+  --ag-header-foreground-color: #60646c;
+
+  --ag-row-hover-color: #f8fafc;
+
+  --ag-selected-row-background-color: #eff6ff;
+
+  --ag-odd-row-background-color: #ffffff;
+
+  --ag-borders: solid 1px;
+
+  --ag-border-radius: 0px;
+
+  --ag-header-column-separator-display: block;
+
+  --ag-header-column-separator-color: #e0e1e6;
+
+  --ag-scrollbar-size: 8px;
+
+  border: none;
+
+  overflow: hidden;
+}
+
+.ag-theme-quartz .ag-root-wrapper {
+  border: none;
+}
+
+.ag-theme-quartz .ag-root-wrapper-body {
+  border: none;
+}
+
+.ag-theme-quartz .ag-header {
+  border-bottom: 1px solid #e0e1e6;
+}
+
+.ag-theme-quartz .ag-header-cell {
+  border-top: 1px solid #e0e1e6;
+  border-right: 1px solid #e0e1e6;
+  border-bottom: 1px solid #e0e1e6;
+
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+.ag-theme-quartz .ag-header-cell-label {
+  height: 18px;
+
+  gap: 4px;
+
+  font-size: 12px;
+
+  font-weight: 500;
+
+  color: #60646c;
+}
+
+.ag-theme-quartz .ag-cell {
+  border-right: 1px solid #e0e1e6;
+  border-bottom: 1px solid #e0e1e6;
+
+  font-size: 12px;
+
+  color: #1f2937;
+
+  display: flex;
+
+  align-items: center;
+}
+
+.ag-theme-quartz .ag-cell-focus,
+.ag-theme-quartz .ag-cell-no-focus {
+  border: none !important;
+}
+
+.ag-theme-quartz .ag-cell-inline-editing {
+  border-radius: 6px;
+
+  border: 1px solid #60a5fa !important;
+
+  background: #ffffff;
+
+  box-shadow: 0 0 0 3px rgba(96, 165, 250, 0.08);
+}
+
+.ag-theme-quartz .ag-row {
+  transition: background-color 120ms ease;
+}
