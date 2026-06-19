@@ -1,9 +1,6 @@
 # Star Wars Fleet
 
 A modern Angular 21 single-page application that displays Star Wars starship data in a responsive, editable, infinitely scrolling data grid.
-
-The project was built as a front-end technical assessment using Angular, TypeScript, TailwindCSS, and AG Grid.
-
 ---
 
 # Features
@@ -107,56 +104,12 @@ The project includes:
 
 The application uses the **Starships** resource.
 
-Primary intended API:
-
-```bash
-https://swapi.dev/api/starships
-```
-
-Fallback API used during development:
-
 ```bash
 https://swapi.info/api/starships
 ```
 
 ---
 
-# API Fallback Note
-
-The assessment specifies usage of:
-
-```bash
-https://swapi.dev/
-```
-
-with server-side pagination using:
-
-```bash
-?page=
-```
-
-During development, `swapi.dev` was unavailable and unstable.
-
-To ensure the application remained functional and demonstrable, the project uses:
-
-```bash
-https://swapi.info/api/starships
-```
-
-as a SWAPI-compatible fallback source.
-
-Unlike `swapi.dev`, `swapi.info` returns the complete starships array instead of paginated `{ results }` responses.
-
-To preserve the required UX and architecture:
-- pagination behavior is simulated inside the Angular store/service layer
-- infinite scrolling still works as required
-- pages are cached in memory
-- rows append seamlessly during scrolling
-- no loading indicators appear during scroll loading
-
-No write operations are sent to any API.
-
----
 
 # Infinite Scroll Implementation
 
@@ -304,31 +257,6 @@ Used for:
 - modern UI implementation
 
 ---
-
-# Trade-offs and Limitations
-
-## SWAPI Availability
-
-The main trade-off is the use of `swapi.info` instead of `swapi.dev`.
-
-Reason:
-- `swapi.dev` was unavailable during development
-
-Because of this:
-- true server-side pagination could not be demonstrated directly
-- pagination is simulated client-side
-
-However:
-- the infinite-scroll UX remains the same
-- caching behavior is preserved
-- scrolling remains seamless
-- overfetching during scrolling is avoided
-
-## Persistence
-
-Edits are stored only in memory.
-
-Refreshing the page resets all edits.
 
 ## Backend
 
